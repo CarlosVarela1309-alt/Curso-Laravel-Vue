@@ -3,7 +3,6 @@
 namespace Laravel\Jetstream;
 
 use App\Http\Middleware\HandleInertiaRequests;
-use Illuminate\Contracts\Http\Kernel;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -26,6 +25,7 @@ use Laravel\Jetstream\Http\Livewire\UpdatePasswordForm;
 use Laravel\Jetstream\Http\Livewire\UpdateProfileInformationForm;
 use Laravel\Jetstream\Http\Livewire\UpdateTeamNameForm;
 use Laravel\Jetstream\Http\Middleware\ShareInertiaData;
+use Laravel\Jetstream\Http\Kernel;
 use Livewire\Livewire;
 
 class JetstreamServiceProvider extends ServiceProvider

@@ -5,15 +5,23 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
+use Spatie\Permission\Models\Role;
 
 class UserSeeder extends Seeder
 {
     public function run()
     {
-        User::create([
+        // Crear rol admin si no existe
+        $adminRole = Role::firstOrCreate(['name' => 'admin']);
+
+        // Crear usuario admin
+        $user = User::create([
             'name' => 'Admin',
             'email' => 'admin@example.com',
-            'password' => Hash::make('password'), // contraseña hasheada
+            'password' => Hash::make('password'),
         ]);
+
+        // Asignar rol
+        $user->assignRole('admin');
     }
 }

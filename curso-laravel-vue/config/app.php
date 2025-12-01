@@ -135,6 +135,8 @@ return [
         Illuminate\Encryption\EncryptionServiceProvider::class,
         Illuminate\Filesystem\FilesystemServiceProvider::class,
         Illuminate\Foundation\Providers\FoundationServiceProvider::class,
+        Illuminate\Session\SessionServiceProvider::class,
+        Illuminate\Hashing\HashServiceProvider::class,
 
         // 👇 Aquí añadimos lo que faltaba
         Spatie\Permission\PermissionServiceProvider::class,
